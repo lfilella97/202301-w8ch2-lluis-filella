@@ -2,8 +2,12 @@
   "name": "202301-w8ch2-lluis-filella",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/js/index.js",
+  "type": "module",
   "scripts": {
+    "build": "tsc",
+    "build:dev": "tsc --watch",
+    "start": "tsc && node dist/js/index.js",
     "prepare": "husky install"
   },
   "author": "",
