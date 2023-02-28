@@ -1,9 +1,11 @@
 import { clients } from "./data/clients.js";
-import { type Dnis, type Clients } from "./types";
+import { filterByMinWageSalary, getWagesAverage } from "./utils/utils.js";
 
-const index = "empty";
+const minWageAverage = 5000;
+const wagesAverage = getWagesAverage(
+  filterByMinWageSalary(clients, minWageAverage)
+);
 
-const filterByphone = (clients: Clients) =>
-  clients.filter((client) => client.phone).map((client) => client.dni);
-
-console.log(filterByphone(clients));
+console.log(
+  `El saldo medio promedio de los clientes con nómina y con saldo medio menor a ${minWageAverage}€ es: ${wagesAverage}€`
+);

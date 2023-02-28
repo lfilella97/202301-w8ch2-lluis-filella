@@ -10,5 +10,12 @@ export interface Client {
   mobile: string;
 }
 
+export interface ClientResume {
+  dni: string;
+  nameSurnames: string;
+  averageBalance: number;
+}
+
+export type ClientsResume = ClientResume[];
 export type Clients = Client[];
 export type Dnis = Array<Client["dni"]>;
