@@ -1,6 +1,6 @@
 import { type Dnis, type Clients, type ClientsResume } from "./../types";
 
-export const filterByphone = (clients: Clients): Dnis =>
+export const filterByPhone = (clients: Clients): Dnis =>
   clients.filter((client) => client.phone).map((client) => client.dni);
 
 export const filterByMinWageSalary = (
